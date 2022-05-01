@@ -2,8 +2,32 @@ body{
     background-color: red;
 }
 
-#scores{
-    
+section{
+    text-align: center;
+}
+
+
+button{
+    background-color: aqua;
+    width: 150px;
+    height: 50px;
+    margin: 5px;
     text-align: center;
     
+}
+
+.scores-area{
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+#scores{
+    color: blue;
+    font-weight:bold ;
+}
+
+.scores{
+    display: inline-block;
+    padding: 25px;
 }
