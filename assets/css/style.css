@@ -1,5 +1,5 @@
 body{
-    background-color: red;
+    background-color: rgb(255, 0, 187);
 }
 
 section{
@@ -11,8 +11,9 @@ button{
     background-color: aqua;
     width: 150px;
     height: 50px;
-    margin: 5px;
+    margin: 100px;
     text-align: center;
+    
     
 }
 
