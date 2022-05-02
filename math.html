@@ -80,11 +80,13 @@ for(var i=0; i<=questions.length; i++){
 
     for(letter in questions[i].answers){
         mathAnswers.push('<input type="radio" name="question'+i+'" value="'+letter+'">'
-        +letter+questions[i].answers[letter]);
-        document.write(mathAnswers)
+        +letter+" : "+questions[i].answers[letter]);
+        
 
     } //this the end of the answers loop
-}
+    displayOutput.push('<div id="question">'+questions[i].question+"<br>"+'</div>'+'<div id="answers">'+mathAnswers.join('')+"<br>"+'</div>');
+    quizcontainer.innerHTML=displayOutput.join('')
+} //end of main for loop
 
 }
 
