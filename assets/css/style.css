@@ -1,3 +1,7 @@
+*{
+    text-align: center;
+}
+
 body{
     background-color: rgb(255, 0, 187);
 }
@@ -8,36 +12,4 @@ section{
     
 }
 
-
-button{
-    
-    background-color: aqua;
-    width: 150px;
-    height: 30px;
-    margin: 100px;
-    text-align: center;
-    
-    
-    
-}
-
-.scores-area{
-    margin: 5px auto;
-    width: 60%;
-    font-size: 1.2rem;
-}
-
-#scores{
-    color: blue;
-    font-weight:bold ;
-}
-
-.scores{
-    display: inline-block;
-    padding: 25px;
-}
-
-*{
-    text-align: center;
-}
 

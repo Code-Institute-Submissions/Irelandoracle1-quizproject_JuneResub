@@ -2,25 +2,25 @@
 //in an array of obejects
 var mathQuestions=[
     {
-    question:"What is the value of 45/9",
+    question:"How many bones are in the human body?",
      answers:{
-         a:6,
-         b:8,
-         c:5,
-         d:3
+         a:206,
+         b:80,
+         c:209,
+         d:399
      },
     
-     rightAnswer:"c"
+     rightAnswer:"a"
     
     },
     
     {
-    question:"What is the value of 50/5",
+    question:"Which famous British physicist wrote A Brief History of Time?",
      answers:{
-         a:2,
-         b:10,
-         c:4,
-         d:1
+         a:"oracle john",
+         b:"Stephen Hawking",
+         c:"Godwin stallion",
+         d:"Lucad samuel"
      },
     
      rightAnswer:"b"
@@ -28,41 +28,41 @@ var mathQuestions=[
     },
     
     {
-    question:"What is the value of 60/3",
+    question:"Which Apollo moon mission was the first to carry a lunar rover?",
      answers:{
-         a:30,
-         b:10,
-         c:9,
-         d:38
+         a:"Apollo 1",
+         b:"Apollo 19",
+         c:"Apollo 17",
+         d:"Apollo 15"
      },
     
-     rightAnswer:"a"
+     rightAnswer:"d"
     
     },
 
     {
-        question:"Which is greater than 4",
+        question:"Which oath of ethics taken by doctors is named after an Ancient Greek physician?",
         answers:{
-             a:5,
-             b: -5,
-             C: -1/2,
-             d: -25.
+             a:"Frank Whittle",
+             b: "Sans Adams",
+             C: "Hippocratic Oath",
+             d: "Gaay core"
     },
 
-    rightAnswer:"a"
+    rightAnswer:"c"
 
 },
 
     {
-       question: "Simplify: (4 – 5) – (13 – 18 + 2)",
+       question: "What modern day country was Marie Curie born in",
        answers:{
-           a: 22,
-           b: 30,
-           c: 22,
-           d: 2
+           a: "Poland",
+           b: "France",
+           c: "Norway",
+           d: "Nigeria"
     },
     
-    rightAnswer:"d"
+    rightAnswer:"a"
 },
     
 ];
@@ -99,4 +99,3 @@ var mathQuestions=[
     } //end of main for loop
     
     }
-  
