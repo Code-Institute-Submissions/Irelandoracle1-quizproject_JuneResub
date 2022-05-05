@@ -2,12 +2,12 @@
 //in an array of obejects
 var mathQuestions=[
     {
-    question:"What is the smallest county in the island of Ireland?",
+    question:"What is the smallest county in the island of Ireland",
      answers:{
          a:"County Carlow",
-         b:8,
-         c:5,
-         d:3
+         b:"County Dublin",
+         c:"County Louth",
+         d:"County Cork"
      },
     
      rightAnswer:"c"
@@ -15,12 +15,12 @@ var mathQuestions=[
     },
     
     {
-    question:"Which of these is Ireland’s longest river?",
+    question:"Which of these is Ireland longest river",
      answers:{
-         a:2,
+         a:"River dommy",
          b:"river shannon",
-         c:4,
-         d:1
+         c:"River Liffey",
+         d:"River Bendel"
      },
     
      rightAnswer:"b"
@@ -28,7 +28,7 @@ var mathQuestions=[
     },
     
     {
-    question:"Which county in Ireland takes its name from the Vikings?",
+    question:"Which county in Ireland takes its name from the Vikings",
      answers:{
          a:"County cork",
          b:"County Dublin",
@@ -43,10 +43,10 @@ var mathQuestions=[
     {
         question:"What county is river Garavogue",
         answers:{
-             a: Drogeda,
-             b: Galway,
-             C: Dublin,
-             d: Sligo.
+             a: "Drogeda",
+             b: "Galway",
+             C: "Dublin",
+             d: "Sligo"
     },
 
     rightAnswer:"a"
@@ -54,7 +54,7 @@ var mathQuestions=[
 },
 
     {
-       question: "The majestic Mourne Mountains are an Area of Outstanding Natural Beauty. Which writer was inspired by this magical landscape?",
+       question: "The majestic Mourne Mountains are an Area of Outstanding Natural Beauty Which writer was inspired by this magical landscape",
        answers:{
            a: "Seamus Heaney",
            b: "James Joyce",
