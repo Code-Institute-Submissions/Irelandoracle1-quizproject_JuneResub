@@ -98,8 +98,13 @@ var mathQuestions=[
             
     
         } //this the end of the answers loop
-        displayOutput.push('<div class="question">'+questions[i].question+"<br>"+'</div>'+'<div class="answers">'+mathAnswers.join('')+"<br>"+'</div>');
-        quizcontainer.innerHTML=displayOutput.join(' ')
+        displayOutput.push(
+            '<div class="question">'
+        +questions[i].question
+        +'</div>'
+        +'<div class="answers">'+mathAnswers.join('')+'</div>'
+        );
+        quizcontainer.innerHTML=displayOutput.join('')
     } //end of main for loop
     
     }
@@ -107,8 +112,8 @@ var mathQuestions=[
 //once the get quiz result button is clicked
     function displayResults(questions, quizcontainer, scorecontainer){
       //grab all the answers div
-     var userAnswerContainers=questions.querySelectorAll('.answers')
-      document.write(userAnswerContainers)
+     var userAnswerContainers=quizcontainer.querySelectorAll('.answers')
+    
 
 
 
