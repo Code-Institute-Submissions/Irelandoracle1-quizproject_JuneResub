@@ -71,7 +71,7 @@ var mathQuestions=[
     
     var scoreContainer=document.getElementById('score');
     var quizContainer=document.getElementById('quiz');
-    var submitContainer=document.getElementById('submit');
+    var submitButton=document.getElementById('submit');
 
     //call to the dsiplay question function
     
@@ -99,10 +99,24 @@ var mathQuestions=[
     
         } //this the end of the answers loop
         displayOutput.push('<div class="question">'+questions[i].question+"<br>"+'</div>'+'<div class="answers">'+mathAnswers.join('')+"<br>"+'</div>');
-        quizcontainer.innerHTML=displayOutput.join('')
+        quizcontainer.innerHTML=displayOutput.join(' ')
     } //end of main for loop
     
     }
+// this function helps us to display answers
+//once the get quiz result button is clicked
+    function displayResults(questions, quizcontainer, scorecontainer){
+      //grab all the answers div
+     var userAnswerContainers=questions.querySelectorAll('.answers')
+      document.write(userAnswerContainers)
 
+
+
+    }
+
+    submitButton.onclick=function(){
+
+        displayResults(mathQuestions, quizContainer, scoreContainer)
+    }
     
   
