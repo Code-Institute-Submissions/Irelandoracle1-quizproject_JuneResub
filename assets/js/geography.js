@@ -69,7 +69,7 @@ var mathQuestions=[
     
     // second step: store all dom containers in a variable
     
-    var imageContainer=document.getElementById('img');
+    
     var scoreContainer=document.getElementById('score');
     var quizContainer=document.getElementById('quiz');
     var submitContainer=document.getElementById('submit');

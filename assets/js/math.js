@@ -69,10 +69,11 @@ var mathQuestions=[
     
     // second step: store all dom containers in a variable
     
-    var imageContainer=document.getElementById('img');
     var scoreContainer=document.getElementById('score');
     var quizContainer=document.getElementById('quiz');
     var submitContainer=document.getElementById('submit');
+
+    //call to the dsiplay question function
     
     displayQuestions(mathQuestions, quizContainer)
     
@@ -89,14 +90,19 @@ var mathQuestions=[
         mathAnswers=[];
     
         for(letter in questions[i].answers){
-            mathAnswers.push('<input type="radio" name="question'+i+'" value="'+letter+'">'
-            +letter+" : "+questions[i].answers[letter]);
+            mathAnswers.push('<div>'
+            +'<input type="radio" name="question'+i+'" value="'+letter+'">'
+            +letter+" : "+questions[i].answers[letter]
+            +'</div>'
+            );
             
     
         } //this the end of the answers loop
-        displayOutput.push('<div id="question">'+questions[i].question+"<br>"+'</div>'+'<div id="answers">'+mathAnswers.join('')+"<br>"+'</div>');
+        displayOutput.push('<div class="question">'+questions[i].question+"<br>"+'</div>'+'<div class="answers">'+mathAnswers.join('')+"<br>"+'</div>');
         quizcontainer.innerHTML=displayOutput.join('')
     } //end of main for loop
     
     }
+
+    
   
