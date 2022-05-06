@@ -3,7 +3,7 @@
 var mathQuestions=[
     {
     question:"What is the value of 45/9",
-     answers:{
+     answer:{
          a:6,
          b:8,
          c:5,
@@ -16,7 +16,7 @@ var mathQuestions=[
     
     {
     question:"What is the value of 50/5",
-     answers:{
+     answer:{
          a:2,
          b:10,
          c:4,
@@ -29,7 +29,7 @@ var mathQuestions=[
     
     {
     question:"What is the value of 60/3",
-     answers:{
+     answer:{
          a:30,
          b:10,
          c:9,
@@ -42,7 +42,7 @@ var mathQuestions=[
 
     {
         question:"Which is greater than 4",
-        answers:{
+        answer:{
              a:5,
              b: -5,
              C: -1/2,
@@ -55,7 +55,7 @@ var mathQuestions=[
 
     {
        question: "Simplify: (4 – 5) – (13 – 18 + 2)",
-       answers:{
+       answer:{
            a: 22,
            b: 30,
            c: 22,
@@ -89,10 +89,11 @@ var mathQuestions=[
     
         mathAnswers=[];
     
-        for(letter in questions[i].answers){
-            mathAnswers.push('<div>'
+        for(letter in questions[i].answer){
+            mathAnswers.push(
+                '<div>'
             +'<input type="radio" name="question'+i+'" value="'+letter+'">'
-            +letter+" : "+questions[i].answers[letter]
+            +letter+" : "+questions[i].answer[letter]
             +'</div>'
             );
             
@@ -113,7 +114,26 @@ var mathQuestions=[
     function displayResults(questions, quizcontainer, scorecontainer){
       //grab all the answers div
      var userAnswerContainers=quizcontainer.querySelectorAll('.answers')
-    
+     
+     //track users answers
+     var userAnswer="";
+     //initilize the right answers
+     var numberOfCorrectAnswers=0;
+
+     for(var v=0; v<=questions.length; v++){
+      userAnswer=(userAnswerContainers[v].querySelector('input[name=question'+v+']:checked')).value;
+     if(userAnswer===questions[v].rightAnswer){
+        numberOfCorrectAnswers++;
+         //add correct answer image
+         userAnswerContainers[v].innerHTML+="Correct"
+
+     }else{
+        userAnswerContainers[v].innerHTML+="Wrong"
+     }
+
+     }
+     scorecontainer.innerHTML=numberOfCorrectAnswers+"/"+questions.length
+     }
 
 
 
