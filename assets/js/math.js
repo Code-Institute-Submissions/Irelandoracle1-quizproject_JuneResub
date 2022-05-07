@@ -81,15 +81,14 @@ var mathQuestions=[
     
     //this function diplays questions and answers
     //from a loop
-    function displayQuestions(questions, quizcontainer){
+     function displayQuestions(questions, quizcontainer){
       var displayOutput=[];
       var mathAnswers;
     
     for(var i=0; i<=questions.length; i++){
-    
         mathAnswers=[];
     
-        for(letter in questions[i].answer){
+        for(let letter in questions[i].answer){
             mathAnswers.push(
                 '<div>'
             +'<input type="radio" name="question'+i+'" value="'+letter+'">'
@@ -118,30 +117,32 @@ var mathQuestions=[
      //track users answers
      var userAnswer="";
      //initilize the right answers
-     var numberOfCorrectAnswers=0;
+     let numberOfCorrectAnswers=0;
 
-     for(var v=0; v<=questions.length; v++){
+     for(var v=0; v<=questions.length - 1; v++){
+        
       userAnswer=(userAnswerContainers[v].querySelector('input[name=question'+v+']:checked')).value;
      if(userAnswer===questions[v].rightAnswer){
         numberOfCorrectAnswers++;
          //add correct answer image
-         userAnswerContainers[v].innerHTML+="Correct"
+         userAnswerContainers[v].innerHTML="Correct"
 
      }else{
-        userAnswerContainers[v].innerHTML+="Wrong"
+        userAnswerContainers[v].innerHTML="Wrong"
      }
 
      }
-     scorecontainer.innerHTML=numberOfCorrectAnswers+"/"+questions.length
+     scorecontainer.innerHTML=numberOfCorrectAnswers + "/" +questions.length
      }
 
 
 
-    }
+    
 
     submitButton.onclick=function(){
 
         displayResults(mathQuestions, quizContainer, scoreContainer)
     }
     
+
   

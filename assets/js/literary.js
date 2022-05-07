@@ -3,7 +3,7 @@
 var mathQuestions = [
     {
         question: "What is the occupation of the protagonist Guy Montag in Ray Bradburys Fahrenheit 451",
-        answers: {
+        answer: {
             a: "Fisherman",
             b: "Fireman",
             c: "Dentist",
@@ -16,7 +16,7 @@ var mathQuestions = [
 
     {
         question: "In what year was Of Mice and Men published",
-        answers: {
+        answer: {
             a: "1922",
             b: "1935",
             c: "1807",
@@ -29,7 +29,7 @@ var mathQuestions = [
 
     {
         question: "What classic written by Homer relates the adventures and life of Odysseus",
-        answers: {
+        answer: {
             a: "The Odyssey",
             b: "The Wagos",
             c: "The Beetles",
@@ -42,7 +42,7 @@ var mathQuestions = [
 
     {
         question: "How many of Ernest Hemingways ten novels were published posthumously",
-        answers: {
+        answer: {
             a: "Five",
             b: "Seven",
             C: "Three",
@@ -55,7 +55,7 @@ var mathQuestions = [
 
     {
         question: "John Keats wrote what poem to a singing bird",
-        answers: {
+        answer: {
             a: "The Kaftans",
             b: "Ode to A Nightingale",
             c: "Ode to A Night",
@@ -67,35 +67,81 @@ var mathQuestions = [
 
 ];
 
-// second step: store all dom containers in a variable
+ // second step: store all dom containers in a variable
+    
+ var scoreContainer=document.getElementById('score');
+ var quizContainer=document.getElementById('quiz');
+ var submitButton=document.getElementById('submit');
+
+ //call to the dsiplay question function
+ 
+ displayQuestions(mathQuestions, quizContainer)
+ 
+ //step three: create  a quiz display function
+ 
+ //this function diplays questions and answers
+ //from a loop
+  function displayQuestions(questions, quizcontainer){
+   var displayOutput=[];
+   var mathAnswers;
+ 
+ for(var i=0; i<=questions.length; i++){
+     mathAnswers=[];
+ 
+     for(let letter in questions[i].answer){
+         mathAnswers.push(
+             '<div>'
+         +'<input type="radio" name="question'+i+'" value="'+letter+'">'
+         +letter+" : "+questions[i].answer[letter]
+         +'</div>'
+         );
+         
+ 
+     } //this the end of the answers loop
+     displayOutput.push(
+         '<div class="question">'
+     +questions[i].question
+     +'</div>'
+     +'<div class="answers">'+mathAnswers.join('')+'</div>'
+     );
+     quizcontainer.innerHTML=displayOutput.join('')
+ } //end of main for loop
+ 
+ }
+// this function helps us to display answers
+//once the get quiz result button is clicked
+ function displayResults(questions, quizcontainer, scorecontainer){
+   //grab all the answers div
+  var userAnswerContainers=quizcontainer.querySelectorAll('.answers')
+  
+  //track users answers
+  var userAnswer="";
+  //initilize the right answers
+  let numberOfCorrectAnswers=0;
+
+  for(var v=0; v<=questions.length - 1; v++){
+     
+   userAnswer=(userAnswerContainers[v].querySelector('input[name=question'+v+']:checked')).value;
+  if(userAnswer===questions[v].rightAnswer){
+     numberOfCorrectAnswers++;
+      //add correct answer image
+      userAnswerContainers[v].innerHTML="Correct"
+
+  }else{
+     userAnswerContainers[v].innerHTML="Wrong"
+  }
+
+  }
+  scorecontainer.innerHTML=numberOfCorrectAnswers + "/" +questions.length
+  }
 
 
-var scoreContainer = document.getElementById('score');
-var quizContainer = document.getElementById('quiz');
-var submitContainer = document.getElementById('submit');
 
-displayQuestions(mathQuestions, quizContainer)
+ 
 
-//step three: create  a quiz display function
+ submitButton.onclick=function(){
 
-//this function diplays questions and answers
-//from a loop
-function displayQuestions(questions, quizcontainer) {
-    var displayOutput = [];
-    var mathAnswers;
+     displayResults(mathQuestions, quizContainer, scoreContainer)
+ }
+ 
 
-    for (var i = 0; i <= questions.length; i++) {
-
-        mathAnswers = [];
-
-        for (letter in questions[i].answers) {
-            mathAnswers.push('<input type="radio" name="question' + i + '" value="' + letter + '">'
-                + letter + " : " + questions[i].answers[letter]);
-
-
-        } //this the end of the answers loop
-        displayOutput.push('<div id="question">' + questions[i].question + "<br>" + '</div>' + '<div id="answers">' + mathAnswers.join('') + "<br>" + '</div>');
-        quizcontainer.innerHTML = displayOutput.join('')
-    } //end of main for loop
-
-}

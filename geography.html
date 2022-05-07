@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Quiz Game</title>
-    </head>
     <body>
-      <div id="img">image</div>  
+      <header>
+
+        <ul>
+            <li><a class="active" href="home.html">HOME </a></li>
+            <li><a href="science.html">SCIENCE</a></li>
+            <li> <a href="math.html">MATHEMATICS</a></li>
+            <li> <a href="literary.html">LITERARY</a></li>
+            <li><a style="float:right" href="sports.html">SPORTS</a></li>
+        </ul>
+      </header>
+
+      <section>
+        <h1>Select Questions</h1>
+      </section>
+      
       <div id="score">0/0</div>
       <div id="quiz"></div>
-      <button id="submit">Get Quiz Result</button>
+      <button onclick="displayResults(mathQuestions, quizContainer, scoreContainer)" id="submit">Get Quiz Result</button>
 
       <script src="assets/js/geography.js"></script>
 

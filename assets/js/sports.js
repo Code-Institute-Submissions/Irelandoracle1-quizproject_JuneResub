@@ -3,7 +3,7 @@
 var mathQuestions = [
     {
         question: "Jurgen Klopp began his manegeral career ayt which German club",
-        answers: {
+        answer: {
             a: "Mainz 05",
             b: "Mainz 07",
             c: "Main 10",
@@ -16,7 +16,7 @@ var mathQuestions = [
 
     {
         question: "Which England footballer was famously never given a yellow card",
-        answers: {
+        answer: {
             a: "Paul Sholes",
             b: "Gary Lineker",
             c: "David Beckham",
@@ -29,7 +29,7 @@ var mathQuestions = [
 
     {
         question: "After retiring from professional cycling what other sport did Bradley Wiggins briefly attempt to make a career in",
-        answers: {
+        answer: {
             a: "Soccer",
             b: "Basketball",
             c: "Volley ball",
@@ -42,7 +42,7 @@ var mathQuestions = [
 
     {
         question: "The Chicago Cubs and Boston Red Sox play which sport",
-        answers: {
+        answer: {
             a: "Rugby",
             b: "Soccer",
             C: "Basketball",
@@ -55,7 +55,7 @@ var mathQuestions = [
 
     {
         question: "England won the 2003 Rugby World Cup thanks to an iconic drop goal from Jonny Wilkinson. How many points did England score in the match",
-        answers: {
+        answer: {
             a: "20",
             b: "22",
             c: "29",
@@ -68,11 +68,12 @@ var mathQuestions = [
 ];
 
 // second step: store all dom containers in a variable
+    
+var scoreContainer=document.getElementById('score');
+var quizContainer=document.getElementById('quiz');
+var submitButton=document.getElementById('submit');
 
-
-var scoreContainer = document.getElementById('score');
-var quizContainer = document.getElementById('quiz');
-var submitContainer = document.getElementById('submit');
+//call to the dsiplay question function
 
 displayQuestions(mathQuestions, quizContainer)
 
@@ -80,22 +81,67 @@ displayQuestions(mathQuestions, quizContainer)
 
 //this function diplays questions and answers
 //from a loop
-function displayQuestions(questions, quizcontainer) {
-    var displayOutput = [];
-    var mathAnswers;
+ function displayQuestions(questions, quizcontainer){
+  var displayOutput=[];
+  var mathAnswers;
 
-    for (var i = 0; i <= questions.length; i++) {
+for(var i=0; i<=questions.length; i++){
+    mathAnswers=[];
 
-        mathAnswers = [];
+    for(let letter in questions[i].answer){
+        mathAnswers.push(
+            '<div>'
+        +'<input type="radio" name="question'+i+'" value="'+letter+'">'
+        +letter+" : "+questions[i].answer[letter]
+        +'</div>'
+        );
+        
 
-        for (letter in questions[i].answers) {
-            mathAnswers.push('<input type="radio" name="question' + i + '" value="' + letter + '">'
-                + letter + " : " + questions[i].answers[letter]);
-
-
-        } //this the end of the answers loop
-        displayOutput.push('<div id="question">' + questions[i].question + "<br>" + '</div>' + '<div id="answers">' + mathAnswers.join('') + "<br>" + '</div>');
-        quizcontainer.innerHTML = displayOutput.join('')
-    } //end of main for loop
+    } //this the end of the answers loop
+    displayOutput.push(
+        '<div class="question">'
+    +questions[i].question
+    +'</div>'
+    +'<div class="answers">'+mathAnswers.join('')+'</div>'
+    );
+    quizcontainer.innerHTML=displayOutput.join('')
+} //end of main for loop
 
 }
+// this function helps us to display answers
+//once the get quiz result button is clicked
+function displayResults(questions, quizcontainer, scorecontainer){
+  //grab all the answers div
+ var userAnswerContainers=quizcontainer.querySelectorAll('.answers')
+ 
+ //track users answers
+ var userAnswer="";
+ //initilize the right answers
+ let numberOfCorrectAnswers=0;
+
+ for(var v=0; v<=questions.length - 1; v++){
+    
+  userAnswer=(userAnswerContainers[v].querySelector('input[name=question'+v+']:checked')).value;
+ if(userAnswer===questions[v].rightAnswer){
+    numberOfCorrectAnswers++;
+     //add correct answer image
+     userAnswerContainers[v].innerHTML="Correct"
+
+ }else{
+    userAnswerContainers[v].innerHTML="Wrong"
+ }
+
+ }
+ scorecontainer.innerHTML=numberOfCorrectAnswers + "/" +questions.length
+ }
+
+
+
+
+
+submitButton.onclick=function(){
+
+    displayResults(mathQuestions, quizContainer, scoreContainer)
+}
+
+

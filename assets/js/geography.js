@@ -3,7 +3,7 @@
 var mathQuestions=[
     {
     question:"What is the smallest county in the island of Ireland",
-     answers:{
+    answer:{
          a:"County Carlow",
          b:"County Dublin",
          c:"County Louth",
@@ -16,7 +16,7 @@ var mathQuestions=[
     
     {
     question:"Which of these is Ireland longest river",
-     answers:{
+    answer:{
          a:"River dommy",
          b:"river shannon",
          c:"River Liffey",
@@ -29,7 +29,7 @@ var mathQuestions=[
     
     {
     question:"Which county in Ireland takes its name from the Vikings",
-     answers:{
+    answer:{
          a:"County cork",
          b:"County Dublin",
          c:"County Waterford",
@@ -42,7 +42,7 @@ var mathQuestions=[
 
     {
         question:"What county is river Garavogue",
-        answers:{
+        answer:{
              a: "Drogeda",
              b: "Galway",
              C: "Dublin",
@@ -55,7 +55,7 @@ var mathQuestions=[
 
     {
        question: "The majestic Mourne Mountains are an Area of Outstanding Natural Beauty Which writer was inspired by this magical landscape",
-       answers:{
+       answer:{
            a: "Seamus Heaney",
            b: "James Joyce",
            c: "CS Lewis",
@@ -69,10 +69,11 @@ var mathQuestions=[
     
     // second step: store all dom containers in a variable
     
-    
     var scoreContainer=document.getElementById('score');
     var quizContainer=document.getElementById('quiz');
-    var submitContainer=document.getElementById('submit');
+    var submitButton=document.getElementById('submit');
+
+    //call to the dsiplay question function
     
     displayQuestions(mathQuestions, quizContainer)
     
@@ -80,22 +81,68 @@ var mathQuestions=[
     
     //this function diplays questions and answers
     //from a loop
-    function displayQuestions(questions, quizcontainer){
+     function displayQuestions(questions, quizcontainer){
       var displayOutput=[];
       var mathAnswers;
     
     for(var i=0; i<=questions.length; i++){
-    
         mathAnswers=[];
     
-        for(letter in questions[i].answers){
-            mathAnswers.push('<input type="radio" name="question'+i+'" value="'+letter+'">'
-            +letter+" : "+questions[i].answers[letter]);
+        for(let letter in questions[i].answer){
+            mathAnswers.push(
+                '<div>'
+            +'<input type="radio" name="question'+i+'" value="'+letter+'">'
+            +letter+" : "+questions[i].answer[letter]
+            +'</div>'
+            );
             
     
         } //this the end of the answers loop
-        displayOutput.push('<div id="question">'+questions[i].question+"<br>"+'</div>'+'<div id="answers">'+mathAnswers.join('')+"<br>"+'</div>');
+        displayOutput.push(
+            '<div class="question">'
+        +questions[i].question
+        +'</div>'
+        +'<div class="answers">'+mathAnswers.join('')+'</div>'
+        );
         quizcontainer.innerHTML=displayOutput.join('')
     } //end of main for loop
     
     }
+// this function helps us to display answers
+//once the get quiz result button is clicked
+    function displayResults(questions, quizcontainer, scorecontainer){
+      //grab all the answers div
+     var userAnswerContainers=quizcontainer.querySelectorAll('.answers')
+     
+     //track users answers
+     var userAnswer="";
+     //initilize the right answers
+     let numberOfCorrectAnswers=0;
+
+     for(var v=0; v<=questions.length - 1; v++){
+        
+      userAnswer=(userAnswerContainers[v].querySelector('input[name=question'+v+']:checked')).value;
+     if(userAnswer===questions[v].rightAnswer){
+        numberOfCorrectAnswers++;
+         //add correct answer image
+         userAnswerContainers[v].innerHTML="Correct"
+
+     }else{
+        userAnswerContainers[v].innerHTML="Wrong"
+     }
+
+     }
+     scorecontainer.innerHTML=numberOfCorrectAnswers + "/" +questions.length
+     }
+
+
+
+    
+
+    submitButton.onclick=function(){
+
+        displayResults(mathQuestions, quizContainer, scoreContainer)
+    }
+    
+
+  
