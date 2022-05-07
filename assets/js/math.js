@@ -125,10 +125,10 @@ var mathQuestions=[
      if(userAnswer===questions[v].rightAnswer){
         numberOfCorrectAnswers++;
          //add correct answer image
-         userAnswerContainers[v].innerHTML="Correct"
+         userAnswerContainers[v].innerHTML="<img src='assets/images/img/right.jpg'>"
 
      }else{
-        userAnswerContainers[v].innerHTML="Wrong"
+        userAnswerContainers[v].innerHTML="<img src='assets/images/img/wrong.png'>"
      }
 
      }
