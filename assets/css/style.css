@@ -14,15 +14,18 @@ section {
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    width: 905px;
+
   }
   
   li {
     float: left;
     border-right:1px solid #bbb;
+    width:150px;
   }
   
   li:last-child {
@@ -44,3 +47,12 @@ ul {
   .active {
     background-color: #04AA6D;
   }
+
+  #main-quiz{ width:1000px;
+    margin: auto;
+  }
+  @media screen and (max-width: 600px){
+ #main-quiz{ background-color:red; max-width:300px;}
+ li{display:block; float:left;}
+  }
+  #quiz{color:black;}

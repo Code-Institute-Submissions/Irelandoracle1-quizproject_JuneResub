@@ -44,9 +44,9 @@ var mathQuestions=[
         question:"Which is greater than 4",
         answer:{
              a:5,
-             b: -5,
-             C: -1/2,
-             d: -25.
+             b:-5,
+             C:-1/2,
+             d:-25.
     },
 
     rightAnswer:"a"
@@ -56,10 +56,10 @@ var mathQuestions=[
     {
        question: "Simplify: (4 – 5) – (13 – 18 + 2)",
        answer:{
-           a: 22,
-           b: 30,
-           c: 22,
-           d: 2
+           a:22,
+           b:30,
+           c:22,
+           d:2
     },
     
     rightAnswer:"d"
