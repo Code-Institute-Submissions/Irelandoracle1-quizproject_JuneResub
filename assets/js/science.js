@@ -18,7 +18,7 @@ var mathQuestions=[
     question:"Which famous British physicist wrote A Brief History of Time?",
      answer:{
          a:"oracle john",
-         b:"Stephen Hawking",
+         b: "Stephen Hawking",
          c:"Godwin stallion",
          d:"Lucad samuel"
      },
@@ -91,8 +91,12 @@ var mathQuestions=[
         for(let letter in questions[i].answer){
             mathAnswers.push(
                 '<div>'
-            +'<input type="radio" name="question'+i+'" value="'+letter+'">'
+               
+            +'<input type="radio" class="radio-button" name="question'+i+'" value="'+letter+'">'
+            +'<span>'
             +letter+" : "+questions[i].answer[letter]
+            
+            +'</span>'
             +'</div>'
             );
             

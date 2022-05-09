@@ -89,12 +89,16 @@ var mathQuestions = [
      mathAnswers=[];
  
      for(let letter in questions[i].answer){
-         mathAnswers.push(
-             '<div>'
-         +'<input type="radio" name="question'+i+'" value="'+letter+'">'
-         +letter+" : "+questions[i].answer[letter]
-         +'</div>'
-         );
+        mathAnswers.push(
+            '<div>'
+           
+        +'<input type="radio" class="radio-button" name="question'+i+'" value="'+letter+'">'
+        +'<span>'
+        +letter+" : "+questions[i].answer[letter]
+        
+        +'</span>'
+        +'</div>'
+        );
          
  
      } //this the end of the answers loop

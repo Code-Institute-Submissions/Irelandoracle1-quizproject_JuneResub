@@ -91,8 +91,12 @@ for(var i=0; i<=questions.length; i++){
     for(let letter in questions[i].answer){
         mathAnswers.push(
             '<div>'
-        +'<input type="radio" name="question'+i+'" value="'+letter+'">'
+           
+        +'<input type="radio" class="radio-button" name="question'+i+'" value="'+letter+'">'
+        +'<span>'
         +letter+" : "+questions[i].answer[letter]
+        
+        +'</span>'
         +'</div>'
         );
         

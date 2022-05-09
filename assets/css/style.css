@@ -51,8 +51,44 @@ ul {
   #main-quiz{ width:1000px;
     margin: auto;
   }
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 950px){
  #main-quiz{ background-color:red; max-width:300px;}
  li{display:block; float:left;}
+ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: #333;
+  width: 150px;
+
+}
+li{
+  text-align:center;
+}
   }
+  @media screen and (max-width: 1200px){
+    #main-quiz{ background-color:red; max-width:300px;}
+    li{display:block; float:left;}
+   ul {
+     list-style-type: none;
+     padding: 0;
+     background-color: #333;
+     width: 150px;
+   
+   }
+   li{
+     text-align:center;
+   }
+     }
   #quiz{color:black;}
+
+  .radio-button{
+    display: table;
+  }
+   .answers{
+    max-width:150px;
+    margin: auto;
+  }
+  span{
+    position:relative;
+    top:-16px;
+  } 

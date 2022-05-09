@@ -17,7 +17,7 @@ var mathQuestions=[
     {
     question:"What is the value of 50/5",
      answer:{
-         a:2,
+         a :2,
          b:10,
          c:4,
          d:1
@@ -91,8 +91,12 @@ var mathQuestions=[
         for(let letter in questions[i].answer){
             mathAnswers.push(
                 '<div>'
-            +'<input type="radio" name="question'+i+'" value="'+letter+'">'
+               
+            +'<input type="radio" class="radio-button" name="question'+i+'" value="'+letter+'">'
+            +'<span>'
             +letter+" : "+questions[i].answer[letter]
+            
+            +'</span>'
             +'</div>'
             );
             
