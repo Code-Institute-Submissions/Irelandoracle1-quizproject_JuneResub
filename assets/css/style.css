@@ -88,7 +88,12 @@ li{
     max-width:150px;
     margin: auto;
   }
-  span{
+  .main-answer{
     position:relative;
     top:-16px;
+    left: 15px;
   } 
+
+  .theanswer{
+    margin:10px;
+  }

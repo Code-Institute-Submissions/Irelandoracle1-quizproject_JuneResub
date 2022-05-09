@@ -6,8 +6,9 @@ var mathQuestions=[
     answer:{
          a:"County Carlow",
          b:"County Dublin",
-         c:"County Louth",
-         d:"County Cork"
+         c:"County  Louth",
+         d:"County Cork",
+        
      },
     
      rightAnswer:"c"
@@ -93,9 +94,11 @@ var mathQuestions=[
                 '<div>'
                
             +'<input type="radio" class="radio-button" name="question'+i+'" value="'+letter+'">'
-            +'<span>'
-            +letter+" : "+questions[i].answer[letter]
-            
+            +'<span class="main-answer">'
+            +letter+" : "
+           + '<span class="the-answer">'
+           +questions[i].answer[letter]
+           +'</span>'
             +'</span>'
             +'</div>'
             );
