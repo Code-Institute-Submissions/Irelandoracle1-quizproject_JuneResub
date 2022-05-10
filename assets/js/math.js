@@ -45,7 +45,7 @@ var mathQuestions=[
         answer:{
              a:5,
              b:-5,
-             C:-1/2,
+             c:-1/2,
              d:-25.
     },
 
