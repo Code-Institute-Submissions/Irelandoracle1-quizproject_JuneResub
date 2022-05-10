@@ -1,5 +1,6 @@
 Jolly Quiz
 Jolly Quiz is a Web Application developed to help people assess themselves on their knowledge of different subject matters in an interactive and entertaining manner.The Application is targetted at people looking for a fun way to assess themselves on their knowledge of different subjects. Any edutainment lover, will definitely fall in love with Jolly Quiz App.
+[home page](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/cap1.PNG)
 
 ⦁Existing Features
     *Navigation Bar
