@@ -88,12 +88,12 @@ li{
     max-width:150px;
     margin: auto;
   }
-  .main-answer{
+  span{
     position:relative;
     top:-16px;
     left: 15px;
+    text-align: center;
+    width: -webkit-fill-available;
   } 
 
-  .theanswer{
-    margin:10px;
-  }
+  

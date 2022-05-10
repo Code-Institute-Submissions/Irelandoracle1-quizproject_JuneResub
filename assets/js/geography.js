@@ -94,12 +94,10 @@ var mathQuestions=[
                 '<div>'
                
             +'<input type="radio" class="radio-button" name="question'+i+'" value="'+letter+'">'
-            +'<span class="main-answer">'
+            +'<span>'
             +letter+" : "
-           + '<span class="the-answer">'
-           +questions[i].answer[letter]
-           +'</span>'
-            +'</span>'
+            +questions[i].answer[letter]
+             +'</span>'
             +'</div>'
             );
             
