@@ -148,5 +148,4 @@ var mathQuestions=[
         displayResults(mathQuestions, quizContainer, scoreContainer)
     }
     
-
-  
+    
