@@ -46,7 +46,7 @@ var mathQuestions=[
         answer:{
              a: "Drogeda",
              b: "Galway",
-             C: "Dublin",
+             c: "Dublin",
              d: "Sligo"
     },
 

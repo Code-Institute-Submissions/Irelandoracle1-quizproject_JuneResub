@@ -45,7 +45,7 @@ var mathQuestions=[
         answer:{
              a:"Frank Whittle",
              b: "Sans Adams",
-             C: "Hippocratic Oath",
+             c: "Hippocratic Oath",
              d: "Gaay core"
     },
 

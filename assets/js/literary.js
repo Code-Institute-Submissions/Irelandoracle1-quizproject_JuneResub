@@ -45,7 +45,7 @@ var mathQuestions = [
         answer: {
             a: "Five",
             b: "Seven",
-            C: "Three",
+            c: "Three",
             d: "Twenty"
         },
 

@@ -17,10 +17,10 @@ var mathQuestions=[
     {
     question:"What is the value of 50/5",
      answer:{
-         a :2,
+         a:02,
          b:10,
-         c:4,
-         d:1
+         c:04,
+         d:01
      },
     
      rightAnswer:"b"
@@ -32,7 +32,7 @@ var mathQuestions=[
      answer:{
          a:20,
          b:10,
-         c:9,
+         c:09,
          d:38
      },
     
@@ -43,7 +43,7 @@ var mathQuestions=[
     {
         question:"Which is greater than 4",
         answer:{
-             a:5,
+             a:+5,
              b:-5,
              c:-1/2,
              d:-25.
@@ -59,7 +59,7 @@ var mathQuestions=[
            a:22,
            b:30,
            c:22,
-           d:2
+           d:02
     },
     
     rightAnswer:"d"
