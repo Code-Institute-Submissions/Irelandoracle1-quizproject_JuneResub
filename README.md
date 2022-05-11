@@ -1,9 +1,10 @@
 # Jolly Quiz
 Jolly Quiz is a Web Application developed to help people assess themselves on their knowledge of different subject matters in an interactive and entertaining manner.The Application is targetted at people looking for a fun way to assess themselves on their knowledge of different subjects. Any edutainment lover, will definitely fall in love with Jolly Quiz App.
-![home page](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/cap1.PNG)
+![home page](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/coding.jpeg)
 
-# Existing Features
-    - __Navigation Bar__
+### Existing Features
+
+- __Navigation Bar__
            -Jolly Quiz features a responsive navigagtion bar with links to the pages of the                    different subject's quiz
             - With the Navigation Bar, you can easily navigate from one particular subject's quiz to the other.
   ## The Home Page
@@ -16,7 +17,7 @@ Jolly Quiz is a Web Application developed to help people assess themselves on th
       After the user has selected answers to each questions and clicked the submit button, immediately, he receives his score for that subject with images to display the right and wrong answers so the user immediately sees his result in unconfusing manner.
       
   
-#Validator Testing
+# Validator Testing
 -HTML
 No errors were returned when passing through the official [W3C validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Firelandoracle1.github.io%2Fquizproject%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 -CSS No errors were found when passing through the official
