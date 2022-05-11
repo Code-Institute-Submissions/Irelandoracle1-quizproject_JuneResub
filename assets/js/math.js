@@ -30,7 +30,7 @@ var mathQuestions=[
     {
     question:"What is the value of 60/3",
      answer:{
-         a:30,
+         a:20,
          b:10,
          c:9,
          d:38
