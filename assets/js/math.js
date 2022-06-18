@@ -1,4 +1,4 @@
-//first step: store questions, answers options
+first step: store questions, answers options
 //in an array of obejects
 var mathQuestions=[
     {
@@ -9,7 +9,7 @@ var mathQuestions=[
          c:5,
          d:3
      },
-    
+    //
      rightAnswer:"c"
     
     },
@@ -72,7 +72,7 @@ var mathQuestions=[
     var scoreContainer=document.getElementById('score');
     var quizContainer=document.getElementById('quiz');
     var submitButton=document.getElementById('submit');
-    var emptyValue=document.getElementById('emptyAlert');
+    var wrongAlert=document.getElementById('wrong-alert');
 
     //call to the dsiplay question function
     
@@ -132,19 +132,18 @@ var mathQuestions=[
          //add correct answer image
          userAnswerContainers[v].innerHTML="<img src='assets/images/img/right.jpg'>"
 
-     }else if((userAnswer==null) || (userAnswer=="undefined"){
-        var emptyMessage="<p style='color:red'> No Answer Was Chosen</p>"; 
-     }
+     }else if(userAnswers==null || userAnswers=="undefined"){
+        var error_message="<i style='color:red;'>Choose an answer</i>";
+        }
      else{
         userAnswerContainers[v].innerHTML="<img src='assets/images/img/wrong.png'>"
      }
 
      }
      scorecontainer.innerHTML=numberOfCorrectAnswers + "/" +questions.length
-     if(emptyMessage){
-
-        emptyValue.innerHTML=emptyMessage;
-     }
+     if(error_message){
+        wrongAlert.innerHTML +="<p style='color:red; font-weight:bolder;'>Choose an answer</p>"; 
+       }
      }
 
 
