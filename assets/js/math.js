@@ -72,6 +72,7 @@ var mathQuestions=[
     var scoreContainer=document.getElementById('score');
     var quizContainer=document.getElementById('quiz');
     var submitButton=document.getElementById('submit');
+    var emptyValue=document.getElementById('emptyAlert');
 
     //call to the dsiplay question function
     
@@ -131,12 +132,19 @@ var mathQuestions=[
          //add correct answer image
          userAnswerContainers[v].innerHTML="<img src='assets/images/img/right.jpg'>"
 
-     }else{
+     }else if((userAnswer==null) || (userAnswer=="undefined"){
+        var emptyMessage="<p style='color:red'> No Answer Was Chosen</p>"; 
+     }
+     else{
         userAnswerContainers[v].innerHTML="<img src='assets/images/img/wrong.png'>"
      }
 
      }
      scorecontainer.innerHTML=numberOfCorrectAnswers + "/" +questions.length
+     if(emptyMessage){
+
+        emptyValue.innerHTML=emptyMessage;
+     }
      }
 
 
