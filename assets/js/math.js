@@ -89,7 +89,7 @@ var mathQuestions=[
     for(var i=0; i<=questions.length; i++){
         mathAnswers=[];
     
-        for(let letter in questions[i].answer){
+        for(var letter in questions[i].answer){
             mathAnswers.push(
                 '<div>'
                
