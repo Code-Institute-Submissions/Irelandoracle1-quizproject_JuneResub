@@ -1,4 +1,4 @@
-first step: store questions, answers options
+//first step: store questions, answers options
 //in an array of obejects
 var mathQuestions=[
     {
