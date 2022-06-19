@@ -74,9 +74,7 @@ var mathQuestions=[
     var submitButton=document.getElementById('submit');
     var wrongAlert=document.getElementById('wrong-alert');
 
-    //call to the dsiplay question function
     
-    displayQuestions(mathQuestions, quizContainer)
     
     //step three: create  a quiz display function
     
@@ -148,7 +146,9 @@ var mathQuestions=[
 
 
 
+    //call to the dsiplay question function
     
+displayQuestions(mathQuestions, quizContainer)
 
     submitButton.onclick=function(){
 
