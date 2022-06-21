@@ -1,13 +1,13 @@
 //first step: store questions, answers options
 //in an array of obejects
-var mathQuestions=[
+var mathQuestions = [
     {
-    question:"What is the smallest county in the island of Ireland",
-    answer:{
-         a:"County Carlow",
-         b:"County Dublin",
-         c:"County  Louth",
-         d:"County Cork",
+      question : "What is the smallest county in the island of Ireland",
+       answer : {
+         a : "County Carlow",
+         b : "County Dublin",
+         c : "County  Louth",
+         d : "County Cork",
         
      },
     
@@ -73,7 +73,6 @@ var mathQuestions=[
 var scoreContainer=document.getElementById('score');
 var quizContainer=document.getElementById('quiz');
 var submitButton=document.getElementById('submit');
-var wrongAlert=document.getElementById('wrong-alert');
 
 
 
@@ -88,27 +87,19 @@ try{
 for(var i=0; i<=questions.length; i++){
     mathAnswers=[];
 
-    for(var letter in questions[i].answer){
+  for(var letter in questions[i].answer){
+    if(questions[i].answer !==null){
         mathAnswers.push(
-            '<div>'
-           
-        +'<input type="radio" class="radio-button" name="question'+i+'" value="'+letter+'">'
-        +'<span>'
-        +letter+" : "+questions[i].answer[letter]
+            '<div>'+
+          '<input type="radio" class="radio-button" name="question'+i+'" value="'+letter+'">'+'<span>' +letter+" : "+questions[i].answer[letter] +'</span>'+'</div>');
         
-        +'</span>'
-        +'</div>'
-        );
-        
-
+    }
     } //this the end of the answers loop
+     
     displayOutput.push(
-        '<div class="question">'
-    +questions[i].question
-    +'</div>'
-    +'<div class="answers">'+mathAnswers.join('')+'</div>'
+        '<div class="question">'+questions[i].question +'</div>'+'<div class="answers">'+mathAnswers.join('')+'</div>'
     );
-    quizcontainer.innerHTML=displayOutput.join('')
+    quizcontainer.innerHTML=displayOutput.join('');
 } //end of main for loop
 }catch(e){}
 }
@@ -116,12 +107,12 @@ for(var i=0; i<=questions.length; i++){
 //once the get quiz result button is clicked
 function displayResults(questions, quizcontainer, scorecontainer){
   //grab all the answers div
- var userAnswerContainers=quizcontainer.querySelectorAll('.answers')
+ var userAnswerContainers=quizcontainer.querySelectorAll('.answers');
  
  //track users answers
  var userAnswer="";
  //initilize the right answers
- let numberOfCorrectAnswers=0;
+ var numberOfCorrectAnswers=0;
 
  for(var v=0; v<=questions.length - 1; v++){
     
@@ -129,17 +120,17 @@ function displayResults(questions, quizcontainer, scorecontainer){
  if(userAnswer===questions[v].rightAnswer){
     numberOfCorrectAnswers++;
      //add correct answer image
-     userAnswerContainers[v].innerHTML="<img src='assets/images/img/right.jpg'>"
+     userAnswerContainers[v].innerHTML="<img src='assets/images/img/right.jpg'>";
 
  }else if(userAnswer==null || userAnswer=="undefined"){
     userAnswerContainers[v].innerHTML="<i style='color:orange;'>Choose an answer</i>";
     }
  else{
-    userAnswerContainers[v].innerHTML="<img src='assets/images/img/wrong.png'>"
+    userAnswerContainers[v].innerHTML="<img src='assets/images/img/wrong.png'>";
  }
 
  }
- scorecontainer.innerHTML=numberOfCorrectAnswers + "/" +questions.length
+ scorecontainer.innerHTML=numberOfCorrectAnswers + "/" +questions.length;
 
  }
 
@@ -147,9 +138,9 @@ function displayResults(questions, quizcontainer, scorecontainer){
 
 //call to the dsiplay question function
 
-displayQuestions(mathQuestions, quizContainer)
+displayQuestions(mathQuestions, quizContainer);
 
 submitButton.onclick=function(){
 
-    displayResults(mathQuestions, quizContainer, scoreContainer)
-}
+    displayResults(mathQuestions, quizContainer, scoreContainer);
+};

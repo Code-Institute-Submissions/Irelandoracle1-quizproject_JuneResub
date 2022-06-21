@@ -93,7 +93,7 @@ li{
     top:-16px;
     left: 15px;
     text-align: center;
-    width: -webkit-fill-available;
+    width:-webkit-fill-available;
   } 
 
   
