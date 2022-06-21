@@ -131,7 +131,7 @@ function displayResults(questions, quizcontainer, scorecontainer){
      userAnswerContainers[v].innerHTML="<img src='assets/images/img/right.jpg'>"
 
  }else if(userAnswer==null || userAnswer=="undefined"){
-    userAnswerContainers[v].innerHTML="<i style='color:red;'>Choose an answer</i>";
+    userAnswerContainers[v].innerHTML="<i style='color:orange;'>Choose an answer</i>";
     }
  else{
     userAnswerContainers[v].innerHTML="<img src='assets/images/img/wrong.png'>"
