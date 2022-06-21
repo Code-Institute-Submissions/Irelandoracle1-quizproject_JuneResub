@@ -135,7 +135,7 @@ function displayResults(questions, quizcontainer, scorecontainer){
     }
  else{
     userAnswerContainers[v].innerHTML="<img src='assets/images/img/wrong.png'>"
- }
+ }""
 
  }
  scorecontainer.innerHTML=numberOfCorrectAnswers + "/" +questions.length
