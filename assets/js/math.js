@@ -83,7 +83,7 @@ var mathQuestions=[
      function displayQuestions(questions, quizcontainer){
       var displayOutput=[];
       var mathAnswers;
-    
+    try{
     for(var i=0; i<=questions.length; i++){
         mathAnswers=[];
     
@@ -109,7 +109,7 @@ var mathQuestions=[
         );
         quizcontainer.innerHTML=displayOutput.join('')
     } //end of main for loop
-    
+}catch(e){}
     }
 // this function helps us to display answers
 //once the get quiz result button is clicked
@@ -124,14 +124,14 @@ var mathQuestions=[
 
      for(var v=0; v<=questions.length - 1; v++){
         
-      userAnswer=(userAnswerContainers[v].querySelector('input[name=question'+v+']:checked')).value;
+      userAnswer=(userAnswerContainers[v].querySelector('input[name=question'+v+']:checked')  || {}).value;
      if(userAnswer===questions[v].rightAnswer){
         numberOfCorrectAnswers++;
          //add correct answer image
          userAnswerContainers[v].innerHTML="<img src='assets/images/img/right.jpg'>"
 
-     }else if(userAnswers==null || userAnswers=="undefined"){
-        var error_message="<i style='color:red;'>Choose an answer</i>";
+     }else if(userAnswer==null || userAnswer=="undefined"){
+        userAnswerContainers[v].innerHTML="<i style='color:red;'>Choose an answer</i>";
         }
      else{
         userAnswerContainers[v].innerHTML="<img src='assets/images/img/wrong.png'>"
@@ -139,9 +139,7 @@ var mathQuestions=[
 
      }
      scorecontainer.innerHTML=numberOfCorrectAnswers + "/" +questions.length
-     if(error_message){
-        wrongAlert.innerHTML +="<p style='color:red; font-weight:bolder;'>Choose an answer</p>"; 
-       }
+   
      }
 
 
