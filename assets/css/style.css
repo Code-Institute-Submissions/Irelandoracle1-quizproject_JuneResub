@@ -44,10 +44,6 @@ ul {
     background-color: #111;
   }
   
-  .active {
-    background-color: #04AA6D;
-  }
-
   #main-quiz{ width:1000px;
     margin: auto;
   }
@@ -94,5 +90,14 @@ li{
     left: 15px;
     text-align: center;
   } 
+body.home ul li.home,
+body.maths ul li.maths,
+body.science ul li.science,
+body.geography ul li.geography,
+body.literary ul li.literary,
+body.sports ul li.sports
+ {
 
+background-color: #04AA6D;
+}
   
