@@ -34,12 +34,13 @@ the HTML span element used for holding the option answers, does not respond to p
 
 ## Deployment
 
- -The site was deployed to GitHub pages. The steps to deploy are as follows: 
-    -In the GitHub repository, I navigated to the Settings tab 
-    -From the source section drop-down menu, I selected the Master Branch
-    -Once the master branch has been selected, the page was automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+- The site was deployed to GitHub pages. The steps for the deployment are as follows: 
+  - In the GitHub repository, I navigated to the Settings tab 
+  - From the source section drop-down menu, I select the Master Branch
+  - Once the master branch has been selected, the page was automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://irelandoracle1.github.io/quizproject/
+The live link can be found here -https://irelandoracle1.github.io/quizproject/
+
 
 ## Credits 
 
@@ -55,4 +56,3 @@ The live link can be found here - https://irelandoracle1.github.io/quizproject/
   -The image used to indicate wrong answers were taken from this  
 [wikipedia creative Commons image site](https://commons.wikimedia.org/wiki/Category:Red_X_icons)
 
--The audio used "WELCOME TO THE GAME" was gotten from free sound.org
