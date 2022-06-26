@@ -12,13 +12,14 @@ Jolly Quiz is a Web Application developed to help people assess themselves on th
 
     The home page (landing page) gives a textual overview of the Jolly Quiz App and summarizes how it works, in order to help users quickly have an understanding of what to expect from the Application.
    ![home page](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/quiz1.png)
+
   ## Quiz Pages
 
 
-      -Jolly Quiz features quiz on the following subjects: Mathematics, Literary, Geography, Science and Sports. 
-      -Each Subject's quiz are featured in their own unique pages in the Web Application
-      -Each subject's quiz features five questions with 4 options to choose from
-      -After the user has selected answers to each questions and clicked the submit button, immediately, he receives his score for that subject with images to display the right and wrong answers so the user immediately sees his result in unconfusing manner.
+      Jolly Quiz features quiz on the following subjects: Mathematics, Literary, Geography, Science and Sports. 
+      Each Subject's quiz are featured in their own unique pages in the Web Application
+      Each subject's quiz features five questions with 4 options to choose from
+      After the user has selected answers to each questions and clicked the submit button, immediately, he receives his score for that subject with images to display the right and wrong answers so the user immediately sees his result in unconfusing manner.
       ![Quiz Sample](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/gamesexample.png)
 
 - __Validator Testing__
@@ -43,8 +44,8 @@ The live link can be found here - https://irelandoracle1.github.io/quizproject/
 
 ## Credits
    ### Content
-    -Instructions on how to implement the quiz logic with Javascript  was taken from  the tutorial at
-  [This Quiz Tutorial](https://simplestepscode.com/javascript-quiz-tutorial/)
+        Instructions on how to implement the quiz logic with Javascript  was taken from  the tutorial at
+       [This Quiz Tutorial](https://simplestepscode.com/javascript-quiz-tutorial/)
      
 ### Media
   -Font Awesome Icons were used for the Home Page Menu Links
