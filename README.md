@@ -12,8 +12,9 @@ Jolly Quiz is a Web Application developed to help people assess themselves on th
 
     The home page (landing page) gives a textual overview of the Jolly Quiz App and summarizes how it works, in order to help users quickly have an understanding of what to expect from the Application.
    ![home page](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/quiz1.png)
-   
   ## Quiz Pages
+
+
       -Jolly Quiz features quiz on the following subjects: Mathematics, Literary, Geography, Science and Sports. 
       -Each Subject's quiz are featured in their own unique pages in the Web Application
       -Each subject's quiz features five questions with 4 options to choose from
