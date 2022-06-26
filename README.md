@@ -41,11 +41,13 @@ the HTML span element used for holding the option answers, does not respond to p
 
 The live link can be found here - https://irelandoracle1.github.io/quizproject/
 
-## Credits
-   ### Content
-      Instructions on how to implement the quiz logic with Javascript  was taken from  the tutorial at
+## Credits 
+
+### Content 
+
+-  Instructions on how to implement the quiz logic with Javascript  was taken from  the tutorial at
       [This Quiz Tutorial](https://simplestepscode.com/javascript-quiz-tutorial/)
-     
+
 ### Media
   -Font Awesome Icons were used for the Home Page Menu Links
   -The image used to indicate right answers were taken from this wikipedia 
